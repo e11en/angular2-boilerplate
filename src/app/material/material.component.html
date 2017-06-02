@@ -1,0 +1,128 @@
+<md-tab-group>
+    <md-tab label="Form">
+
+        <section>
+            <form class="example-form">
+                <md-input-container class="example-full-width">
+                    <input mdInput placeholder="Disabled input" disabled value="Some value">
+                </md-input-container>
+
+                <md-input-container class="example-full-width">
+                    <input mdInput placeholder="First name">
+                </md-input-container>
+
+                <md-input-container class="example-full-width">
+                    <textarea mdInput placeholder="Text area">Some text</textarea>
+                </md-input-container>
+
+                <md-input-container class="example-full-width">
+                    <input mdInput #postalCode maxlength="5" placeholder="Input with hint" value="12345">
+                    <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+                </md-input-container>
+            </form>
+            <div class="label">Input</div>
+        </section>
+
+        <section>
+            <div class="">
+                <md-checkbox aria-checked="true">Checked</md-checkbox>
+                <md-checkbox>Not checked</md-checkbox>
+            </div>
+            <div class="label">Checkbox</div>
+        </section>
+
+
+
+    </md-tab>
+    <md-tab label="Buttons">
+
+        <section>
+            <button md-button>Button</button>
+            <button md-button color="primary">Primary</button>
+            <button md-button color="accent">Accent</button>
+            <button md-button disabled="true" color="primary">Disabled</button>
+            <button md-button color="warn">Warning</button>
+            <div class="label">Flat</div>
+        </section>
+        <section>
+            <button md-raised-button>Button</button>
+            <button md-raised-button color="primary">Primary</button>
+            <button md-raised-button color="accent">Accent</button>
+            <button md-raised-button disabled="true" color="primary">Disabled</button>
+            <button md-raised-button color="warn">Warn</button>
+            <div class="label">Raised</div>
+        </section>
+        <section>
+            <button md-fab>
+                <md-icon>cake</md-icon>
+            </button>
+            <button md-fab color="primary">
+                <md-icon>android</md-icon>
+            </button>
+            <button md-fab color="accent">
+                <md-icon>face</md-icon>
+            </button>
+            <button md-fab disabled="true">
+                <md-icon>comment</md-icon>
+            </button>
+            <button md-fab color="warn">
+                <md-icon>announcement</md-icon>
+            </button>
+            <div class="label">FAB</div>
+        </section>
+        <section>
+            <a md-button [href]="googleUrl" target="_blank">Default Link</a>
+            <a md-button color="primary" [href]="googleUrl" target="_blank">Primary Link</a>
+            <a md-button color="accent" [href]="googleUrl" target="_blank">Accent Link</a>
+            <a md-button disabled="true" color="primary" [href]="googleUrl" target="_blank">Disabled Link</a>
+            <a md-button color="warn" [href]="googleUrl" target="_blank">Warn Link</a>
+            <div class="label">Links</div>
+        </section>
+        <section >
+            <button md-button title="Bookmark">
+                <md-icon>bookmark border</md-icon>
+            </button>
+            <button md-button color="primary" title="Settings">
+                <md-icon>menu</md-icon>
+            </button>
+            <button md-button color="accent" title="Favorite">
+                <md-icon>favorite</md-icon>
+            </button>
+            <a md-button href="http://google.com" title="Launch Google.com in new window"
+               target="_blank" disabled="true">
+                <md-icon>launch</md-icon>
+            </a>
+            <button md-button color="warn" title="More">
+                <md-icon>more_vert</md-icon>
+            </button>
+            <div class="label">Icon Button</div>
+        </section>
+
+    </md-tab>
+    <md-tab label="Card">
+        <md-card class="example-card">
+            <md-card-header>
+                <div md-card-avatar class="example-avatar-image"></div>
+                <md-card-title>Shiba Inu</md-card-title>
+                <md-card-subtitle>Dog Breed</md-card-subtitle>
+            </md-card-header>
+            <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            <md-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+            </md-card-content>
+            <md-card-actions>
+                <button md-button class="pull-left"><md-icon>thumb_up</md-icon> LIKE</button>
+                <button md-button class="pull-right"><md-icon>share</md-icon> SHARE</button>
+                <div style="clear: both"></div>
+            </md-card-actions>
+        </md-card>
+    </md-tab>
+</md-tab-group>
+
+
+
+
