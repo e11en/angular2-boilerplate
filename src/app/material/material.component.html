@@ -1,8 +1,7 @@
 <md-tab-group>
-    <md-tab label="Form">
-
-        <section>
-            <form class="example-form">
+    <md-tab label="Input elements">
+        <div class="input-elements">
+            <section>
                 <md-input-container class="example-full-width">
                     <input mdInput placeholder="Disabled input" disabled value="Some value">
                 </md-input-container>
@@ -19,84 +18,114 @@
                     <input mdInput #postalCode maxlength="5" placeholder="Input with hint" value="12345">
                     <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
                 </md-input-container>
-            </form>
-            <div class="label">Input</div>
-        </section>
+                <div class="label">Input</div>
+            </section>
 
-        <section>
-            <div class="">
-                <md-checkbox aria-checked="true">Checked</md-checkbox>
-                <md-checkbox>Not checked</md-checkbox>
-            </div>
-            <div class="label">Checkbox</div>
-        </section>
+            <section>
+                <div class="example-group">
+                    <md-checkbox [checked]="true">Checked</md-checkbox>
+                    <md-checkbox [indeterminate]="true">Indeterminate</md-checkbox>
+                    <md-checkbox [disabled]="true">Disabled</md-checkbox>
+                </div>
+                <div class="label">Checkbox</div>
+            </section>
 
+            <section>
+                <md-radio-group class="example-group" [(ngModel)]="favoriteSeason">
+                    <md-radio-button *ngFor="let season of seasons" [value]="season">
+                        {{season}}
+                    </md-radio-button>
+                </md-radio-group>
+                <div class="label">Radio button</div>
+            </section>
+
+            <section>
+                <md-input-container>
+                    <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+                    <button mdSuffix [mdDatepickerToggle]="picker"></button>
+                </md-input-container>
+                <md-datepicker #picker></md-datepicker>
+                <div class="label">Date picker</div>
+            </section>
+
+            <section>
+                <md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+                    <md-option *ngFor="let food of foods" [value]="food.id">
+                        {{food.name}}
+                    </md-option>
+                </md-select>
+                <div class="label">Select</div>
+            </section>
+        </div>
     </md-tab>
+
     <md-tab label="Buttons">
-
-        <section>
-            <button md-button>Button</button>
-            <button md-button color="primary">Primary</button>
-            <button md-button color="accent">Accent</button>
-            <button md-button disabled="true" color="primary">Disabled</button>
-            <button md-button color="warn">Warning</button>
-            <div class="label">Flat</div>
-        </section>
-        <section>
-            <button md-raised-button>Button</button>
-            <button md-raised-button color="primary">Primary</button>
-            <button md-raised-button color="accent">Accent</button>
-            <button md-raised-button disabled="true" color="primary">Disabled</button>
-            <button md-raised-button color="warn">Warn</button>
-            <div class="label">Raised</div>
-        </section>
-        <section>
-            <button md-fab>
-                <md-icon>cake</md-icon>
-            </button>
-            <button md-fab color="primary">
-                <md-icon>android</md-icon>
-            </button>
-            <button md-fab color="accent">
-                <md-icon>face</md-icon>
-            </button>
-            <button md-fab disabled="true">
-                <md-icon>comment</md-icon>
-            </button>
-            <button md-fab color="warn">
-                <md-icon>announcement</md-icon>
-            </button>
-            <div class="label">FAB</div>
-        </section>
-        <section>
-            <a md-button [href]="googleUrl" target="_blank">Default Link</a>
-            <a md-button color="primary" [href]="googleUrl" target="_blank">Primary Link</a>
-            <a md-button color="accent" [href]="googleUrl" target="_blank">Accent Link</a>
-            <a md-button disabled="true" color="primary" [href]="googleUrl" target="_blank">Disabled Link</a>
-            <a md-button color="warn" [href]="googleUrl" target="_blank">Warn Link</a>
-            <div class="label">Links</div>
-        </section>
-        <section >
-            <button md-button title="Bookmark">
-                <md-icon>bookmark border</md-icon>
-            </button>
-            <button md-button color="primary" title="Settings">
-                <md-icon>menu</md-icon>
-            </button>
-            <button md-button color="accent" title="Favorite">
-                <md-icon>favorite</md-icon>
-            </button>
-            <a md-button href="http://google.com" title="Launch Google.com in new window"
-               target="_blank" disabled="true">
-                <md-icon>launch</md-icon>
-            </a>
-            <button md-button color="warn" title="More">
-                <md-icon>more_vert</md-icon>
-            </button>
-            <div class="label">Icon Button</div>
-        </section>
+        <div class="button-elements">
+            <section>
+                <button md-button>Button</button>
+                <button md-button color="primary">Primary</button>
+                <button md-button color="accent">Accent</button>
+                <button md-button disabled="true" color="primary">Disabled</button>
+                <button md-button color="warn">Warning</button>
+                <div class="label">Flat</div>
+            </section>
+            <section>
+                <button md-raised-button>Button</button>
+                <button md-raised-button color="primary">Primary</button>
+                <button md-raised-button color="accent">Accent</button>
+                <button md-raised-button disabled="true" color="primary">Disabled</button>
+                <button md-raised-button color="warn">Warn</button>
+                <div class="label">Raised</div>
+            </section>
+            <section>
+                <button md-fab>
+                    <md-icon>cake</md-icon>
+                </button>
+                <button md-fab color="primary">
+                    <md-icon>android</md-icon>
+                </button>
+                <button md-fab color="accent">
+                    <md-icon>face</md-icon>
+                </button>
+                <button md-fab disabled="true">
+                    <md-icon>comment</md-icon>
+                </button>
+                <button md-fab color="warn">
+                    <md-icon>announcement</md-icon>
+                </button>
+                <div class="label">FAB</div>
+            </section>
+            <section>
+                <a md-button [href]="googleUrl" target="_blank">Default Link</a>
+                <a md-button color="primary" [href]="googleUrl" target="_blank">Primary Link</a>
+                <a md-button color="accent" [href]="googleUrl" target="_blank">Accent Link</a>
+                <a md-button disabled="true" color="primary" [href]="googleUrl" target="_blank">Disabled Link</a>
+                <a md-button color="warn" [href]="googleUrl" target="_blank">Warn Link</a>
+                <div class="label">Links</div>
+            </section>
+            <section >
+                <button md-button title="Bookmark">
+                    <md-icon>bookmark border</md-icon>
+                </button>
+                <button md-button color="primary" title="Settings">
+                    <md-icon>menu</md-icon>
+                </button>
+                <button md-button color="accent" title="Favorite">
+                    <md-icon>favorite</md-icon>
+                </button>
+                <a md-button href="http://google.com" title="Launch Google.com in new window"
+                   target="_blank" disabled="true">
+                    <md-icon>launch</md-icon>
+                </a>
+                <button md-button color="warn" title="More">
+                    <md-icon>more_vert</md-icon>
+                </button>
+                <div class="label">Icon Button</div>
+            </section>
+        </div>
 
     </md-tab>
+
     <md-tab label="Card">
         <md-card class="example-card">
             <md-card-header>

@@ -1,7 +1,6 @@
 section {
     background: #f2f2f2;
     border-radius: 3px;
-    text-align: center;
     margin: 1em;
     position: relative !important;
     padding-bottom: 10px;
@@ -9,6 +8,10 @@ section {
 section [md-button], section [md-raised-button], section [md-fab] {
     margin-top: 16px;
     margin-bottom: 16px;
+}
+
+.button-elements section {
+    text-align: center;
 }
 
 .label {
@@ -29,11 +32,15 @@ section [md-button], section [md-raised-button], section [md-fab] {
     background-size: cover;
 }
 
-.example-form {
-    padding: 1em 0 0 5em ;
-    width: 500px;
+.input-elements section {
+    padding: 1em 1em 1em 10em ;
 }
 
 .example-full-width {
     width: 100%;
+}
+
+.example-group {
+    display: inline-flex;
+    flex-direction: column;
 }
