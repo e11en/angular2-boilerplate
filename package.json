@@ -37,11 +37,13 @@
     "@material/card": "^0.2.2",
     "angular-in-memory-web-api": "~0.3.0",
     "core-js": "^2.4.1",
+    "hammerjs": "^2.0.8",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "@types/hammerjs": "^2.0.34",
     "@types/jasmine": "2.5.36",
     "@types/node": "^6.0.74",
     "canonical-path": "0.0.2",

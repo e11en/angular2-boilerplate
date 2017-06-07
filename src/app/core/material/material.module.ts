@@ -8,7 +8,8 @@ import { MdButtonModule,
          MdNativeDateModule,
          MdDatepickerModule,
          MdRadioModule,
-         MdSelectModule
+         MdSelectModule,
+         MdSliderModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -19,13 +20,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MdIconModule, MdCardModule, MdTabsModule,
         MdInputModule, MdDatepickerModule,
         MdNativeDateModule, MdRadioModule,
-        MdSelectModule
+        MdSelectModule, MdSliderModule
     ],
     exports: [
         MdButtonModule, MdCheckboxModule,
         MdIconModule, MdCardModule, MdTabsModule,
         MdInputModule, MdDatepickerModule,
-        MdRadioModule, MdSelectModule
+        MdRadioModule, MdSelectModule,
+        MdSliderModule
     ],
 })
 export class MaterialModule { }
