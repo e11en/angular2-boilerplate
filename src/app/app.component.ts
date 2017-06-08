@@ -5,7 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
-    title = 'Angular 2 Boilerplate';
-    datetime = new Date().toUTCString();
-}
+export class AppComponent  { }

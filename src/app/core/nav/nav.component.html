@@ -1,5 +1,14 @@
-<header class="mdl-layout__header">
-    <div class="mdl-navigation">
-        <a *ngFor="let item of menuItems" class="nav-link" routerLinkActive="router-link-active" href="{{item.link}}">{{item.caption}}</a>
+<div class="nav-wrapper">
+    <header class="nav-header">
+        Angular 2
+    </header>
+    <div class="nav-menu-bar">
+        <ul>
+            <a *ngFor="let item of menuItems" routerLinkActive="router-link-active" href="{{item.link}}">
+                <li>
+                    {{item.caption}}
+                </li>
+            </a>
+        </ul>
     </div>
-</header>
+</div>

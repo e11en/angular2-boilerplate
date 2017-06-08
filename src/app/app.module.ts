@@ -17,8 +17,9 @@ import { OverviewComponent } from './overview/overview.component';
 
 
 const appRoutes: Routes = [
-    { path: 'material', component: MaterialComponent },
+    { path: '',         component: MaterialComponent },
     { path: 'overview', component: OverviewComponent },
+    { path: 'material', component: MaterialComponent },
 ];
 
 @NgModule({
