@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MdDialog, MdSnackBar } from '@angular/material';
 
-import { DialogComponent } from '../core/material/dialog.component';
-import { SnackbarComponent } from '../core/material/snackbar.component';
+import { DialogComponent } from '../../core/material/dialog.component';
+import { SnackbarComponent } from '../../core/material/snackbar.component';
 
 @Component({
     selector: 'material',
