@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 
 /* Components */
 import { AppComponent }  from './app.component';
+import { NavComponent } from './components/nav/nav.component';
 import { MaterialComponent } from './components/material/material.component';
 import { OverviewComponent } from './components/overview/overview.component';
 
@@ -22,8 +23,8 @@ import { AppRoutes } from './app.routes';
         HighlightJsService
     ],
     declarations: [
-        AppComponent, MaterialComponent,
-        OverviewComponent
+        AppComponent, NavComponent,
+        MaterialComponent, OverviewComponent
     ],
     bootstrap:    [ AppComponent ]
 })

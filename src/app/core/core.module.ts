@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { MaterialModule } from './material/material.module';
-import { NavComponent } from '../components/nav/nav.component';
 import { SnackbarComponent } from './material/snackbar.component';
 import { DialogComponent } from './material/dialog.component';
 
@@ -16,11 +15,10 @@ import { DialogComponent } from './material/dialog.component';
     ],
     exports: [
         MaterialModule, BrowserModule,
-        CommonModule, FormsModule,
-        NavComponent
+        CommonModule, FormsModule
     ],
     declarations: [
-        NavComponent, SnackbarComponent,
+        SnackbarComponent,
         DialogComponent
     ],
     providers: [ ],
