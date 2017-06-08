@@ -6,8 +6,8 @@ import { MdDialogRef } from '@angular/material';
     template: `<h1 md-dialog-title>Dialog</h1>
     <div md-dialog-content>What would you like to do?</div>
     <div md-dialog-actions>
-        <button md-button md-dialog-close="Option 1">Option 1</button>
-        <button md-button md-dialog-close="Option 2">Option 2</button>
+        <button md-raised-button color="primary" md-dialog-close="Option 1">Option 1</button>
+        <button md-raised-button color="accent" md-dialog-close="Option 2">Option 2</button>
     </div>`,
 })
 export class DialogComponent {
