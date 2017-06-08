@@ -65,6 +65,43 @@
                 </code></pre>
             </div>
         </section>
+
+        <!-- Tooltip -->
+        <section>
+            <button md-raised-button (click)="toggleCode('tooltip')" color="accent" class="btn-toggle-code">
+                <md-icon>code</md-icon>
+            </button>
+
+            <div *ngIf="!showCode.tooltip" class="example-wrapper">
+                <table>
+                    <tr>
+                        <td style="padding-right: 50px"><p mdTooltip="Tooltip!" mdTooltipPosition="before">Tooltip before</p></td>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="after">Tooltip after</p></td>
+                    </tr>
+                    <tr>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="above">Tooltip above</p></td>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="below">Tooltip below</p></td>
+                    </tr>
+                    <tr>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="left">Tooltip left</p></td>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="right">Tooltip right</p></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="label">Tooltip</div>
+
+            <div *ngIf="showCode.tooltip" class="example-code" highlight-js-content>
+                <pre><code>
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="before"&#62;Tooltip before&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="after"&#62;Tooltip after&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="above"&#62;Tooltip above&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="below"&#62;Tooltip below&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="left"&#62;Tooltip left&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="right"&#62;Tooltip right&#60;/p&#62;
+                </code></pre>
+            </div>
+        </section>
     </md-tab>
 
     <md-tab label="Buttons">
