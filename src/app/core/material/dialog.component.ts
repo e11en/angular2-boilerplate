@@ -3,7 +3,12 @@ import { MdDialogRef } from '@angular/material';
 
 @Component({
     selector: 'dialog-basic',
-    template: `<h1>Title</h1><p>This is a basic dialog</p>`,
+    template: `<h1 md-dialog-title>Dialog</h1>
+    <div md-dialog-content>What would you like to do?</div>
+    <div md-dialog-actions>
+        <button md-button md-dialog-close="Option 1">Option 1</button>
+        <button md-button md-dialog-close="Option 2">Option 2</button>
+    </div>`,
 })
 export class DialogComponent {
     constructor(public dialogRef: MdDialogRef<DialogComponent>) {}

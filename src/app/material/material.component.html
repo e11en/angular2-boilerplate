@@ -8,7 +8,7 @@
             </button>
 
             <div *ngIf="!showCode.dialog" class="example-wrapper">
-                <button md-button (click)="openDialog()">Launch dialog</button>
+                <button md-raised-button (click)="openDialog()">Open dialog</button>
                 You chose: {{selectedOption}}
             </div>
 
@@ -39,7 +39,12 @@
 
                     @Component(&#123;
                         selector: 'dialog-basic',
-                        template: `&#60;h1&#62;Title&#60;/h1&#62;&#60;p&#62;This is a basic dialog&#60;/p&#62;`,
+                        template: `&#60;h1 md-dialog-title&#62;Dialog&#60;/h1&#62;
+                        &#60;div md-dialog-content&#62;What would you like to do?&#60;/div&#62;
+                        &#60;div md-dialog-actions&#62;
+                            &#60;button md-button md-dialog-close="Option 1"&#62;Option 1&#60;/button&#62;
+                            &#60;button md-button md-dialog-close="Option 2"&#62;Option 2&#60;/button&#62;
+                        &#60;/div&#62;`,
                     &#125;)
                     export class DialogComponent &#123;
                         constructor(public dialogRef: MdDialogRef&#60;DialogComponent&#62;) &#123;&#125;
