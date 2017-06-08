@@ -3,7 +3,7 @@
 </header>
 <div class="nav-menu-bar">
     <ul>
-        <a *ngFor="let item of menuItems" routerLinkActive="router-link-active" [routerLink]="['/characters']">
+        <a *ngFor="let item of menuItems" routerLinkActive="router-link-active" [routerLink]="item.link">
             <li>
                 {{item.caption}}
             </li>
