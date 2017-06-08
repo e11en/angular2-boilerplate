@@ -1,14 +1,12 @@
-<div class="nav-wrapper">
-    <header class="nav-header">
-        Angular 2
-    </header>
-    <div class="nav-menu-bar">
-        <ul>
-            <a *ngFor="let item of menuItems" routerLinkActive="router-link-active" href="{{item.link}}">
-                <li>
-                    {{item.caption}}
-                </li>
-            </a>
-        </ul>
-    </div>
+<header class="nav-header">
+    Angular 2
+</header>
+<div class="nav-menu-bar">
+    <ul>
+        <a *ngFor="let item of menuItems" routerLinkActive="router-link-active" [routerLink]="['/characters']">
+            <li>
+                {{item.caption}}
+            </li>
+        </a>
+    </ul>
 </div>

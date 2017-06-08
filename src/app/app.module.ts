@@ -4,29 +4,23 @@ import { AppComponent }  from './app.component';
 import { MaterialModule } from './core/material/material.module';
 import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import 'hammerjs';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 /* Feature Modules */
 import { CoreModule } from './core/core.module';
 import { DialogComponent } from './core/material/dialog.component';
 import { SnackbarComponent } from './core/material/snackbar.component';
+import { AppRoutes } from './app.routes';
 
 /* Components */
 import { MaterialComponent } from './material/material.component';
 import { OverviewComponent } from './overview/overview.component';
 
-
-const appRoutes: Routes = [
-    { path: '',         component: MaterialComponent },
-    { path: 'overview', component: OverviewComponent },
-    { path: 'material', component: MaterialComponent },
-];
-
 @NgModule({
     imports:      [
         BrowserModule, MaterialModule,
         CoreModule, HighlightJsModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(AppRoutes)
     ],
     providers: [
         HighlightJsService
