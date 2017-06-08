@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MdDialog, MdSnackBar } from '@angular/material';
+
 import { DialogComponent } from '../core/material/dialog.component';
+import { SnackbarComponent } from '../core/material/snackbar.component';
 
 @Component({
     selector: 'material',
@@ -29,12 +31,18 @@ export class MaterialComponent {
         this.showCode[section] = !this.showCode[section];
     };
 
-    constructor(public dialog: MdDialog) {}
+    constructor(public dialog: MdDialog, public snackBar: MdSnackBar) {}
 
     openDialog() {
         let dialogRef = this.dialog.open(DialogComponent);
         dialogRef.afterClosed().subscribe(result => {
             this.selectedOption = result;
+        });
+    }
+
+    openSnackBar() {
+        this.snackBar.openFromComponent(SnackbarComponent, {
+            duration: 500,
         });
     }
 }

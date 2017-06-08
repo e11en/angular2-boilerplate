@@ -3,7 +3,7 @@
     <md-tab label="Popups">
         <!-- Dialog -->
         <section>
-            <button md-raised-button (click)="toggleCode('dialog')" color="accent" class="btn-toggle-code">
+            <button md-raised-button color="primary" (click)="toggleCode('dialog')" color="accent" class="btn-toggle-code">
                 <md-icon>code</md-icon>
             </button>
 
@@ -22,6 +22,8 @@
                     <hr>
 
                     <h3>In .TS</h3>
+                    constructor(public dialog: MdDialog) &#123; &#125;
+
                     selectedOption: string;
 
                     openDialog() &#123;
@@ -62,6 +64,62 @@
                     export class AppModule &#123; &#125;
 
 
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- Snackbar -->
+        <section>
+            <button md-raised-button (click)="toggleCode('snackbar')" color="accent" class="btn-toggle-code">
+                <md-icon>code</md-icon>
+            </button>
+
+            <div *ngIf="!showCode.snackbar" class="example-wrapper">
+                <button md-raised-button color="primary" (click)="openSnackBar()" aria-label="Show an example snack-bar">
+                    Open snackbar
+                </button>
+            </div>
+
+            <div class="label">Snackbar</div>
+
+            <div *ngIf="showCode.snackbar" class="example-code" highlight-js-content>
+                <pre><code>
+                    <h3>In .HTML</h3>
+                    &#60;button md-raised-button color="primary" (click)="openSnackBar()" aria-label="Show an example snack-bar"&#62;
+                        Open snackbar
+                    &#60;/button&#62;
+                    <hr>
+
+                    <h3>In .TS</h3>
+                    constructor(public snackBar: MdSnackBar) &#123; &#125;
+
+                    openSnackBar() &#123;
+                        this.snackBar.openFromComponent(SnackbarComponent, &#123;
+                            duration: 500,
+                        &#125;);
+                    &#125;
+                    <hr>
+
+                    <h3>dialog.component.ts</h3>
+                    import &#123; Component &#125; from '@angular/core';
+
+                    @Component(&#123;
+                        selector: 'snackbar-basic',
+                        template: `&#60;span class="example-pizza-party" style="color: white"&#62;
+                                      🍕🍕🍕🍕🍕 Pizza party!!! 🍕🍕🍕🍕🍕
+                                    &#60;/span&#62;`
+                    &#125;)
+                    export class SnackbarComponent &#123; &#125;
+                    <hr>
+
+                    <h3>app.module.ts</h3>
+                    import &#123; SnackbarComponent &#125; from './core/material/snackbar.component';
+
+                    @NgModule(&#123;
+                        declarations: [ SnackbarComponent ],
+                        entryComponents: [SnackbarComponent]
+                    &#125;)
+                    export class AppModule &#123; &#125;
                 </code></pre>
             </div>
         </section>

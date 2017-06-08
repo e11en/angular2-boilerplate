@@ -9,6 +9,7 @@ import 'hammerjs';
 import { CoreModule } from './core/core.module';
 import { MaterialComponent } from './material/material.component';
 import { DialogComponent } from './core/material/dialog.component';
+import { SnackbarComponent } from './core/material/snackbar.component';
 
 
 @NgModule({
@@ -19,8 +20,8 @@ import { DialogComponent } from './core/material/dialog.component';
     providers: [
         HighlightJsService
     ],
-    declarations: [ AppComponent, MaterialComponent, DialogComponent ],
+    declarations: [ AppComponent, MaterialComponent, DialogComponent, SnackbarComponent ],
     bootstrap:    [ AppComponent ],
-    entryComponents: [DialogComponent]
+    entryComponents: [DialogComponent, SnackbarComponent]
 })
 export class AppModule { }

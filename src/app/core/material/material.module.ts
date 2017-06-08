@@ -17,7 +17,8 @@ import { MdButtonModule,
          MdProgressSpinnerModule,
          MdProgressBarModule,
          MdDialogModule,
-         MdTooltipModule
+         MdTooltipModule,
+         MdSnackBarModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -32,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MdSlideToggleModule, MdMenuModule,
         MdToolbarModule, MdButtonToggleModule,
         MdProgressSpinnerModule, MdProgressBarModule,
-        MdDialogModule, MdTooltipModule
+        MdDialogModule, MdTooltipModule,
+        MdSnackBarModule
     ],
     exports: [
         MdButtonModule, MdCheckboxModule,
@@ -43,7 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MdMenuModule, MdToolbarModule,
         MdButtonToggleModule, MdProgressSpinnerModule,
         MdProgressBarModule, MdDialogModule,
-        MdTooltipModule
+        MdTooltipModule, MdSnackBarModule
     ],
 })
 export class MaterialModule { }
