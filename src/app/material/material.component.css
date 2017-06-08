@@ -3,9 +3,9 @@ section {
     border-radius: 3px;
     margin: 1em;
     position: relative !important;
-    padding-bottom: 10px;
+    padding: 1em 1em 1em 10em ;
 }
-section [md-button], section [md-raised-button], section [md-fab] {
+section [md-button], section [md-raised-button], section [md-fab], section [md-button-toggle] {
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -25,15 +25,12 @@ section [md-button], section [md-raised-button], section [md-fab] {
 .example-card {
     width: 500px;
     margin: 1em;
+    float: left;
 }
 
 .example-avatar-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
-}
-
-.input-elements section {
-    padding: 1em 1em 1em 10em ;
 }
 
 .example-full-width {
@@ -43,4 +40,30 @@ section [md-button], section [md-raised-button], section [md-fab] {
 .example-group {
     display: inline-flex;
     flex-direction: column;
+}
+
+.btn-toggle-code {
+    float: right;
+    min-width: 10px;
+}
+
+.example-wrapper {
+    min-height: 3em;
+}
+
+code {
+    text-align: left;
+}
+
+.example-code-card {
+    margin-left: -10em;
+    background-color: transparent;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
 }
