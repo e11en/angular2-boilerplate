@@ -3,8 +3,11 @@ import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import 'hammerjs';
 import { RouterModule } from '@angular/router';
 
-/* Feature Modules */
+/* Modules */
 import { CoreModule } from './core/core.module';
+
+/* Services */
+import { VehicleService } from './services/vehicle.service';
 
 /* Components */
 import { AppComponent }  from './app.component';
@@ -20,7 +23,7 @@ import { AppRoutes } from './app.routes';
         RouterModule.forRoot(AppRoutes)
     ],
     providers: [
-        HighlightJsService
+        HighlightJsService, VehicleService
     ],
     declarations: [
         AppComponent, NavComponent,

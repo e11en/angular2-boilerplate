@@ -1,1 +1,26 @@
-hallo 123
+<md-card>
+    <md-card-header class="card-header-full-width mat-toolbar mat-accent">
+        <md-card-title>Services</md-card-title>
+    </md-card-header>
+    <md-card-content>
+        <h3>Output:</h3>
+        <ul>
+            <li *ngFor="let vehicle of vehicles">
+                {{vehicle.name}}
+            </li>
+        </ul>
+
+        <hr>
+
+        <button md-raised-button (click)="toggleCode('services')" color="accent" class="btn-toggle-code pull-right">
+            <md-icon>code</md-icon>
+        </button>
+        <div style="clear: both"></div>
+
+        <div *ngIf="code.services.show" >
+            <h3>Code:</h3>
+            <pre highlight-js-content><code> {{code.services.text}} </code></pre>
+        </div>
+
+    </md-card-content>
+</md-card>
