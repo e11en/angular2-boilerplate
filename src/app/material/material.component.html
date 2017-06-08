@@ -1,167 +1,5 @@
 <md-tab-group>
 
-    <md-tab label="Popups">
-        <!-- Dialog -->
-        <section>
-            <button md-raised-button color="primary" (click)="toggleCode('dialog')" color="accent" class="btn-toggle-code">
-                <md-icon>code</md-icon>
-            </button>
-
-            <div *ngIf="!showCode.dialog" class="example-wrapper">
-                <button md-raised-button (click)="openDialog()">Open dialog</button>
-                You chose: {{selectedOption}}
-            </div>
-
-            <div class="label">Dialog</div>
-
-            <div *ngIf="showCode.dialog" class="example-code" highlight-js-content>
-                <pre><code>
-                    <h3>In .HTML</h3>
-                    &#60;button md-button (click)="openDialog()"&#62;Launch dialog&#60;/button&#62;
-
-                    <hr>
-
-                    <h3>In .TS</h3>
-                    constructor(public dialog: MdDialog) &#123; &#125;
-
-                    selectedOption: string;
-
-                    openDialog() &#123;
-                        let dialogRef = this.dialog.open(DialogComponent);
-                        dialogRef.afterClosed().subscribe(result => &#123;
-                          this.selectedOption = result;
-                        &#125;);
-                    &#125;
-
-                    <hr>
-
-                    <h3>dialog.component.ts</h3>
-                    import &#123;Component&#125; from '@angular/core';
-                    import &#123; MdDialogRef &#125; from '@angular/material';
-
-                    @Component(&#123;
-                        selector: 'dialog-basic',
-                        template: `&#60;h1 md-dialog-title&#62;Dialog&#60;/h1&#62;
-                        &#60;div md-dialog-content&#62;What would you like to do?&#60;/div&#62;
-                        &#60;div md-dialog-actions&#62;
-                            &#60;button md-button md-dialog-close="Option 1"&#62;Option 1&#60;/button&#62;
-                            &#60;button md-button md-dialog-close="Option 2"&#62;Option 2&#60;/button&#62;
-                        &#60;/div&#62;`,
-                    &#125;)
-                    export class DialogComponent &#123;
-                        constructor(public dialogRef: MdDialogRef&#60;DialogComponent&#62;) &#123;&#125;
-                    &#125;
-
-                    <hr>
-
-                    <h3>app.module.ts</h3>
-                    import &#123; DialogComponent &#125; from './core/material/dialog.component';
-
-                    @NgModule(&#123;
-                        declarations: [ DialogComponent ],
-                        entryComponents: [DialogComponent]
-                    &#125;)
-                    export class AppModule &#123; &#125;
-
-
-                </code></pre>
-            </div>
-        </section>
-
-        <!-- Snackbar -->
-        <section>
-            <button md-raised-button (click)="toggleCode('snackbar')" color="accent" class="btn-toggle-code">
-                <md-icon>code</md-icon>
-            </button>
-
-            <div *ngIf="!showCode.snackbar" class="example-wrapper">
-                <button md-raised-button color="primary" (click)="openSnackBar()" aria-label="Show an example snack-bar">
-                    Open snackbar
-                </button>
-            </div>
-
-            <div class="label">Snackbar</div>
-
-            <div *ngIf="showCode.snackbar" class="example-code" highlight-js-content>
-                <pre><code>
-                    <h3>In .HTML</h3>
-                    &#60;button md-raised-button color="primary" (click)="openSnackBar()" aria-label="Show an example snack-bar"&#62;
-                        Open snackbar
-                    &#60;/button&#62;
-                    <hr>
-
-                    <h3>In .TS</h3>
-                    constructor(public snackBar: MdSnackBar) &#123; &#125;
-
-                    openSnackBar() &#123;
-                        this.snackBar.openFromComponent(SnackbarComponent, &#123;
-                            duration: 500,
-                        &#125;);
-                    &#125;
-                    <hr>
-
-                    <h3>dialog.component.ts</h3>
-                    import &#123; Component &#125; from '@angular/core';
-
-                    @Component(&#123;
-                        selector: 'snackbar-basic',
-                        template: `&#60;span class="example-pizza-party" style="color: white"&#62;
-                                      🍕🍕🍕🍕🍕 Pizza party!!! 🍕🍕🍕🍕🍕
-                                    &#60;/span&#62;`
-                    &#125;)
-                    export class SnackbarComponent &#123; &#125;
-                    <hr>
-
-                    <h3>app.module.ts</h3>
-                    import &#123; SnackbarComponent &#125; from './core/material/snackbar.component';
-
-                    @NgModule(&#123;
-                        declarations: [ SnackbarComponent ],
-                        entryComponents: [SnackbarComponent]
-                    &#125;)
-                    export class AppModule &#123; &#125;
-                </code></pre>
-            </div>
-        </section>
-
-        <!-- Tooltip -->
-        <section>
-            <button md-raised-button (click)="toggleCode('tooltip')" color="accent" class="btn-toggle-code">
-                <md-icon>code</md-icon>
-            </button>
-
-            <div *ngIf="!showCode.tooltip" class="example-wrapper">
-                <table>
-                    <tr>
-                        <td style="padding-right: 50px"><p mdTooltip="Tooltip!" mdTooltipPosition="before">Tooltip before</p></td>
-                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="after">Tooltip after</p></td>
-                    </tr>
-                    <tr>
-                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="above">Tooltip above</p></td>
-                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="below">Tooltip below</p></td>
-                    </tr>
-                    <tr>
-                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="left">Tooltip left</p></td>
-                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="right">Tooltip right</p></td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="label">Tooltip</div>
-
-            <div *ngIf="showCode.tooltip" class="example-code" highlight-js-content>
-                <pre><code>
-                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="before"&#62;Tooltip before&#60;/p&#62;
-                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="after"&#62;Tooltip after&#60;/p&#62;
-                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="above"&#62;Tooltip above&#60;/p&#62;
-                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="below"&#62;Tooltip below&#60;/p&#62;
-                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="left"&#62;Tooltip left&#60;/p&#62;
-                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="right"&#62;Tooltip right&#60;/p&#62;
-                </code></pre>
-            </div>
-        </section>
-    </md-tab>
-
     <md-tab label="Buttons">
         <div class="button-elements">
             <!-- Normal buttons -->
@@ -765,6 +603,168 @@
                       &#60;md-tab label="Tab 1"&#62;Content 1&#60;/md-tab&#62;
                       &#60;md-tab label="Tab 2"&#62;Content 2&#60;/md-tab&#62;
                     &#60;/md-tab-group&#62;
+                </code></pre>
+            </div>
+        </section>
+    </md-tab>
+
+    <md-tab label="Popups">
+        <!-- Dialog -->
+        <section>
+            <button md-raised-button color="primary" (click)="toggleCode('dialog')" color="accent" class="btn-toggle-code">
+                <md-icon>code</md-icon>
+            </button>
+
+            <div *ngIf="!showCode.dialog" class="example-wrapper">
+                <button md-raised-button (click)="openDialog()">Open dialog</button>
+                You chose: {{selectedOption}}
+            </div>
+
+            <div class="label">Dialog</div>
+
+            <div *ngIf="showCode.dialog" class="example-code" highlight-js-content>
+                <pre><code>
+                    <h3>In .HTML</h3>
+                    &#60;button md-button (click)="openDialog()"&#62;Launch dialog&#60;/button&#62;
+
+                    <hr>
+
+                    <h3>In .TS</h3>
+                    constructor(public dialog: MdDialog) &#123; &#125;
+
+                    selectedOption: string;
+
+                    openDialog() &#123;
+                        let dialogRef = this.dialog.open(DialogComponent);
+                        dialogRef.afterClosed().subscribe(result => &#123;
+                          this.selectedOption = result;
+                        &#125;);
+                    &#125;
+
+                    <hr>
+
+                    <h3>dialog.component.ts</h3>
+                    import &#123;Component&#125; from '@angular/core';
+                    import &#123; MdDialogRef &#125; from '@angular/material';
+
+                    @Component(&#123;
+                        selector: 'dialog-basic',
+                        template: `&#60;h1 md-dialog-title&#62;Dialog&#60;/h1&#62;
+                        &#60;div md-dialog-content&#62;What would you like to do?&#60;/div&#62;
+                        &#60;div md-dialog-actions&#62;
+                            &#60;button md-button md-dialog-close="Option 1"&#62;Option 1&#60;/button&#62;
+                            &#60;button md-button md-dialog-close="Option 2"&#62;Option 2&#60;/button&#62;
+                        &#60;/div&#62;`,
+                    &#125;)
+                    export class DialogComponent &#123;
+                        constructor(public dialogRef: MdDialogRef&#60;DialogComponent&#62;) &#123;&#125;
+                    &#125;
+
+                    <hr>
+
+                    <h3>app.module.ts</h3>
+                    import &#123; DialogComponent &#125; from './core/material/dialog.component';
+
+                    @NgModule(&#123;
+                        declarations: [ DialogComponent ],
+                        entryComponents: [DialogComponent]
+                    &#125;)
+                    export class AppModule &#123; &#125;
+
+
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- Snackbar -->
+        <section>
+            <button md-raised-button (click)="toggleCode('snackbar')" color="accent" class="btn-toggle-code">
+                <md-icon>code</md-icon>
+            </button>
+
+            <div *ngIf="!showCode.snackbar" class="example-wrapper">
+                <button md-raised-button color="primary" (click)="openSnackBar()" aria-label="Show an example snack-bar">
+                    Open snackbar
+                </button>
+            </div>
+
+            <div class="label">Snackbar</div>
+
+            <div *ngIf="showCode.snackbar" class="example-code" highlight-js-content>
+                <pre><code>
+                    <h3>In .HTML</h3>
+                    &#60;button md-raised-button color="primary" (click)="openSnackBar()" aria-label="Show an example snack-bar"&#62;
+                        Open snackbar
+                    &#60;/button&#62;
+                    <hr>
+
+                    <h3>In .TS</h3>
+                    constructor(public snackBar: MdSnackBar) &#123; &#125;
+
+                    openSnackBar() &#123;
+                        this.snackBar.openFromComponent(SnackbarComponent, &#123;
+                            duration: 500,
+                        &#125;);
+                    &#125;
+                    <hr>
+
+                    <h3>dialog.component.ts</h3>
+                    import &#123; Component &#125; from '@angular/core';
+
+                    @Component(&#123;
+                        selector: 'snackbar-basic',
+                        template: `&#60;span class="example-pizza-party" style="color: white"&#62;
+                                      🍕🍕🍕🍕🍕 Pizza party!!! 🍕🍕🍕🍕🍕
+                                    &#60;/span&#62;`
+                    &#125;)
+                    export class SnackbarComponent &#123; &#125;
+                    <hr>
+
+                    <h3>app.module.ts</h3>
+                    import &#123; SnackbarComponent &#125; from './core/material/snackbar.component';
+
+                    @NgModule(&#123;
+                        declarations: [ SnackbarComponent ],
+                        entryComponents: [SnackbarComponent]
+                    &#125;)
+                    export class AppModule &#123; &#125;
+                </code></pre>
+            </div>
+        </section>
+
+        <!-- Tooltip -->
+        <section>
+            <button md-raised-button (click)="toggleCode('tooltip')" color="accent" class="btn-toggle-code">
+                <md-icon>code</md-icon>
+            </button>
+
+            <div *ngIf="!showCode.tooltip" class="example-wrapper">
+                <table>
+                    <tr>
+                        <td style="padding-right: 50px"><p mdTooltip="Tooltip!" mdTooltipPosition="before">Tooltip before</p></td>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="after">Tooltip after</p></td>
+                    </tr>
+                    <tr>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="above">Tooltip above</p></td>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="below">Tooltip below</p></td>
+                    </tr>
+                    <tr>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="left">Tooltip left</p></td>
+                        <td><p mdTooltip="Tooltip!" mdTooltipPosition="right">Tooltip right</p></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="label">Tooltip</div>
+
+            <div *ngIf="showCode.tooltip" class="example-code" highlight-js-content>
+                <pre><code>
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="before"&#62;Tooltip before&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="after"&#62;Tooltip after&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="above"&#62;Tooltip above&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="below"&#62;Tooltip below&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="left"&#62;Tooltip left&#60;/p&#62;
+                    &#60;p mdTooltip="Tooltip!" mdTooltipPosition="right"&#62;Tooltip right&#60;/p&#62;
                 </code></pre>
             </div>
         </section>
