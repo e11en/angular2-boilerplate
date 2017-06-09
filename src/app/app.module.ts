@@ -2,6 +2,8 @@ import { NgModule }      from '@angular/core';
 import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import 'hammerjs';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import './core/rxjs.extensions';
 
 /* Modules */
 import { CoreModule } from './core/core.module';
@@ -20,7 +22,8 @@ import { AppRoutes } from './app.routes';
 @NgModule({
     imports:      [
         CoreModule, HighlightJsModule,
-        RouterModule.forRoot(AppRoutes)
+        RouterModule.forRoot(AppRoutes),
+        HttpModule
     ],
     providers: [
         HighlightJsService, VehicleService

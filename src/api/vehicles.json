@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 30,
+      "name": "X-Wing Fighter",
+      "type": "space"
+    },
+    {
+      "id": 31,
+      "name": "TIE Fighter",
+      "type": "space"
+    },
+    {
+      "id": 32,
+      "name": "Y-Wing Fighter",
+      "type": "space"
+    }
+  ]
+}
