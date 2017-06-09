@@ -14,10 +14,8 @@ import { VehicleService } from './services/vehicle.service';
 /* Components */
 import { AppComponent }  from './app.component';
 import { NavComponent } from './components/nav/nav.component';
-import { MaterialComponent } from './components/material/material.component';
-import { ServicesComponent } from './components/services/services.component';
 
-import { AppRoutes } from './app.routes';
+import { AppRoutes, RoutableComponents } from './app.routes';
 
 @NgModule({
     imports:      [
@@ -30,7 +28,7 @@ import { AppRoutes } from './app.routes';
     ],
     declarations: [
         AppComponent, NavComponent,
-        MaterialComponent, ServicesComponent
+        RoutableComponents
     ],
     bootstrap:    [ AppComponent ]
 })
