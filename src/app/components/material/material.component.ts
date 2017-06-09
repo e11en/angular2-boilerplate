@@ -27,7 +27,7 @@ export class MaterialComponent {
 
     selectedOption: string;
 
-    toggleCode = function(section: string) {
+    toggleCode(section: string) {
         this.showCode[section] = !this.showCode[section];
     };
 

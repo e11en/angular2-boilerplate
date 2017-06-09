@@ -7,28 +7,30 @@ import './core/rxjs.extensions';
 
 /* Modules */
 import { CoreModule } from './core/core.module';
+import { AppRoutingModule, routableComponents } from './app.routes';
 
 /* Services */
 import { VehicleService } from './services/vehicle.service';
+import { CanActivateAuthGuard } from './services/can-activate.service';
+import { UserProfileService } from './services/user-profile.service';
 
 /* Components */
 import { AppComponent }  from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 
-import { AppRoutes, RoutableComponents } from './app.routes';
-
 @NgModule({
     imports:      [
         CoreModule, HighlightJsModule,
-        RouterModule.forRoot(AppRoutes),
+        RouterModule, AppRoutingModule,
         HttpModule
     ],
     providers: [
-        HighlightJsService, VehicleService
+        HighlightJsService, VehicleService,
+        CanActivateAuthGuard, UserProfileService
     ],
     declarations: [
         AppComponent, NavComponent,
-        RoutableComponents
+        routableComponents
     ],
     bootstrap:    [ AppComponent ]
 })

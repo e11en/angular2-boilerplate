@@ -1,17 +1,13 @@
 import { Component } from '@angular/core';
 
-
 @Component({
     selector: 'content',
     templateUrl: './routes.component.html',
     styleUrls: ['./routes.component.css']
 })
 export class RoutesComponent {
-
     code = {
-        basic: {
-            show: true,
-            text : `
+        basic: `
             app.routes.ts
         
                 import { Routes } from '@angular/router';
@@ -53,12 +49,25 @@ export class RoutesComponent {
                     bootstrap:    [ AppComponent ]
                 })
                 export class AppModule { }
-
             `
-        }
-    };
+        ,
+        guards: `
+            app.routes.ts
+        
+                import { Routes } from '@angular/router';
 
-    toggleCode = function(section: string) {
-        this.code[section].show = !this.code[section].show;
+                import { MaterialComponent } from './components/material/material.component';
+                import { ServicesComponent } from './components/services/services.component';
+                import { RoutesComponent } from './components/routes/routes.component';
+                
+                export const AppRoutes: Routes = [
+                    { path: '', redirectTo: 'services', pathMatch: 'full' },
+                    { path: 'services', component: ServicesComponent },
+                    { path: 'material', component: MaterialComponent },
+                    { path: 'routes', component: RoutesComponent }
+                    // Add more routes here
+                ];
+               
+            `
     };
 }
