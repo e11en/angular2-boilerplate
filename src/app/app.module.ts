@@ -1,8 +1,8 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
-import 'hammerjs';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import 'hammerjs';
 import './core/rxjs.extensions';
 
 /* Modules */
