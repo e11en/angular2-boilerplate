@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
 import { MaterialComponent } from './components/material/material.component';
-import { OverviewComponent } from './components/overview/overview.component';
+import { ServicesComponent } from './components/services/services.component';
 
 export const AppRoutes: Routes = [
-    { path: '', redirectTo: 'overview', pathMatch: 'full' },
-    { path: 'overview', component: OverviewComponent },
+    { path: '', redirectTo: 'services', pathMatch: 'full' },
+    { path: 'services', component: ServicesComponent },
     { path: 'material', component: MaterialComponent }
 ];

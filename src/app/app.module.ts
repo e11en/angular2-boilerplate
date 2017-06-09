@@ -15,7 +15,7 @@ import { VehicleService } from './services/vehicle.service';
 import { AppComponent }  from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { MaterialComponent } from './components/material/material.component';
-import { OverviewComponent } from './components/overview/overview.component';
+import { ServicesComponent } from './components/services/services.component';
 
 import { AppRoutes } from './app.routes';
 
@@ -30,7 +30,7 @@ import { AppRoutes } from './app.routes';
     ],
     declarations: [
         AppComponent, NavComponent,
-        MaterialComponent, OverviewComponent
+        MaterialComponent, ServicesComponent
     ],
     bootstrap:    [ AppComponent ]
 })

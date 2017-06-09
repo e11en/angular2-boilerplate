@@ -4,10 +4,10 @@ import { Vehicle, VehicleService } from '../../services/vehicle.service';
 
 @Component({
     selector: 'content',
-    templateUrl: './overview.component.html',
-    styleUrls: ['./overview.component.css']
+    templateUrl: './services.component.html',
+    styleUrls: ['./services.component.css']
 })
-export class OverviewComponent {
+export class ServicesComponent {
     vehiclesSimple = this.vehicleService.getVehiclesSimple();
 
     vehiclesHttp: Promise<Vehicle[]>;
