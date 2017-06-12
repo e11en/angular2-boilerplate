@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 })
 export class RoutesComponent {
     code = {
-        basic: `
+        basic:
+            {
+                show: false,
+                text: `
+            app.component.html
+                \<\a routerLinkActive="router-link-active" [routerLink]="['/services']">Services</a>
+            
             app.routes.ts
         
                 import { Routes } from '@angular/router';
@@ -50,6 +56,7 @@ export class RoutesComponent {
                 })
                 export class AppModule { }
             `
+            }
         ,
         guards: {
             show: false,
