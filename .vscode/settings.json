@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "files.exclude": {
+        "**/*.js": {"when": "$(basename).ts"},
+        "**/*.js.map": true,
+        ".vscode": true,
+        ".idea":true,
+        "node_modules":true
+    }
+}
