@@ -1,6 +1,6 @@
-<h2>LOGIN</h2>
-<p>
-    <button (click)="login()" *ngIf="!isLoggedIn">Login</button>
+<p *ngIf="isLoggedIn">You are now logged in.</p>
 
-    <button (click)="logout()" *ngIf="isLoggedIn">Logout</button>
-</p>
+<button md-raised-button color="primary" (click)="login()" *ngIf="!isLoggedIn">Login</button>
+
+<button md-raised-button color="primary" (click)="logout()" *ngIf="isLoggedIn">Logout</button>
+

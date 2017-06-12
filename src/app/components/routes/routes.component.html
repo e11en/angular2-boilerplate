@@ -16,10 +16,19 @@
     </md-card-header>
     <md-card-content>
 
+        <h3>Output:</h3>
         <login></login>
 
-        <h3>Code:</h3>
-        <pre highlight-js-content><code>{{code.guards}}</code></pre>
+        <hr>
 
+        <button md-raised-button (click)="toggleCode('guards')" color="accent" class="btn-toggle-code pull-right">
+            <md-icon>code</md-icon>
+        </button>
+        <div style="clear: both"></div>
+
+        <div *ngIf="code.guards.show" >
+            <h3>Code:</h3>
+            <pre highlight-js-content><code>{{code.guards.text}}</code></pre>
+        </div>
     </md-card-content>
 </md-card>
