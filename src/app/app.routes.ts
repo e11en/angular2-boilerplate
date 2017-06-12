@@ -7,6 +7,7 @@ import { MaterialComponent } from './components/material/material.component';
 import { ServicesComponent } from './components/services/services.component';
 import { RoutesComponent } from './components/routes/routes.component';
 import { LoginComponent } from './components/login/login.component';
+import { ErrorComponent } from './components/error/error.component';
 
 export const AppRoutes: Routes = [
     { path: '', redirectTo: 'services', pathMatch: 'full' },
@@ -21,13 +22,15 @@ export const AppRoutes: Routes = [
             { path: 'login', component: LoginComponent },
         ]
     },
+    { path: '**', component: ErrorComponent },
 ];
 
 export const routableComponents = [
     MaterialComponent,
     ServicesComponent,
     RoutesComponent,
-    LoginComponent
+    LoginComponent,
+    ErrorComponent
 ];
 
 
