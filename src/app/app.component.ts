@@ -1,3 +1,7 @@
+/*
+ * The main component, you can see this as your main layout component.
+ */
+
 import { Component } from '@angular/core';
 
 @Component({

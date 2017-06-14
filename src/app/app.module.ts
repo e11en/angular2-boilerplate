@@ -1,5 +1,9 @@
+/*
+ * This is the main module from which the program wil 'start'.
+ * This module is being bootstrapped in the main.ts file.
+ */
+
 import { NgModule } from '@angular/core';
-import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import 'hammerjs';
@@ -10,9 +14,7 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule, routableComponents } from './app.routes';
 
 /* Services */
-import { VehicleService } from './services/vehicle.service';
-import { CanActivateAuthGuard } from './services/can-activate.service';
-import { UserProfileService } from './services/user-profile.service';
+import { ExampleService } from './services/example.service';
 
 /* Components */
 import { AppComponent }  from './app.component';
@@ -20,13 +22,12 @@ import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
     imports:      [
-        CoreModule, HighlightJsModule,
+        CoreModule,
         RouterModule, AppRoutingModule,
         HttpModule
     ],
     providers: [
-        HighlightJsService, VehicleService,
-        CanActivateAuthGuard, UserProfileService
+        ExampleService
     ],
     declarations: [
         AppComponent, NavComponent,

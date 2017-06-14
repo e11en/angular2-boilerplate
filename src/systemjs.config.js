@@ -29,9 +29,7 @@
 
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-      'hammerjs': 'npm:hammerjs/hammer.js',
-      'angular2-highlight-js': 'node_modules/angular2-highlight-js/lib'
+      'hammerjs': 'npm:hammerjs/hammer.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -45,8 +43,7 @@
       },
       rxjs: {
         defaultExtension: 'js'
-      },
-      'angular2-highlight-js': { main: 'highlight-js.module', defaultExtension: 'js'}
+      }
     }
   });
 })(this);

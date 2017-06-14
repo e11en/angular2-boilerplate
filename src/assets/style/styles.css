@@ -18,3 +18,13 @@ body {
 .pull-right:after {
   clear: right;
 }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
