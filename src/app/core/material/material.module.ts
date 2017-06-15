@@ -5,7 +5,7 @@
  * This will be passed on through the core module.
  */
 
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { MdButtonModule,
          MdCheckboxModule,
          MdIconModule,
@@ -53,6 +53,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MdButtonToggleModule, MdProgressSpinnerModule,
         MdProgressBarModule, MdDialogModule,
         MdTooltipModule, MdSnackBarModule
-    ],
+    ]
 })
 export class MaterialModule { }
