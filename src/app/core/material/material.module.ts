@@ -1,4 +1,11 @@
-import { NgModule } from '@angular/core';
+/*
+ * This is a collection module for the different type
+ * of material design elements. If you need any
+ * other elements then you need to add them here.
+ * This will be passed on through the core module.
+ */
+
+import { NgModule} from '@angular/core';
 import { MdButtonModule,
          MdCheckboxModule,
          MdIconModule,
@@ -46,6 +53,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MdButtonToggleModule, MdProgressSpinnerModule,
         MdProgressBarModule, MdDialogModule,
         MdTooltipModule, MdSnackBarModule
-    ],
+    ]
 })
 export class MaterialModule { }

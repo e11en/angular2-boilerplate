@@ -1,3 +1,8 @@
+/*
+ * This components create a new dialog element.
+ * This can be used for messages to the user.
+ */
+
 import { Component } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
 

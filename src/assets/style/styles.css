@@ -1,20 +1,30 @@
 /* Global styles */
 body {
-  background-color: #fafafa;
-  padding: 0 5em;
-  font-family: Roboto,"Helvetica Neue",sans-serif;
+    background-color: #fafafa;
+    padding: 0 5em;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
 }
 
 .pull-left {
-  float: left;
+    float: left;
 }
 .pull-left:after {
-  clear: left;
+    clear: left;
 }
 
 .pull-right {
-  float: right;
+    float: right;
 }
 .pull-right:after {
-  clear: right;
+    clear: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
 }
