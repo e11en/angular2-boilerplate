@@ -20,4 +20,9 @@ describe('ExampleComponent', () => {
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
     }));
+
+    it('should be an array', async(() => {
+        const test = [true, false, false, false];
+        expect(test).toBeArrayOfBooleans();
+    }));
 });
