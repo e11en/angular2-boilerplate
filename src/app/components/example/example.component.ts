@@ -6,7 +6,7 @@ import { SnackbarComponent } from '../../core/material/snackbar.component';
 
 @Component({
     templateUrl: './example.component.html',
-    styleUrls: ['./example.component.css']
+    styleUrls: ['./example.component.scss']
 })
 export class ExampleComponent {
     vehicles = this.exampleService.getVehicles();
