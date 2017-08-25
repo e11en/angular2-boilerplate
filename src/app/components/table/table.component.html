@@ -1,0 +1,33 @@
+<ngx-datatable
+        class="material card-stand-alone"
+        [rows]="rows"
+        [columns]="columns"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [limit]="10"
+        [loadingIndicator]="false"
+        [selected]="selected"
+        [selectionType]="'checkbox'"
+        (select)='onSelect($event)'>
+</ngx-datatable>
+
+<ng-template #editBtnTpl let-row="row" let-value="value" let-i="index">
+    <button md-raised-button (click)="sampleFunction(value)" color="primary"><md-icon>create</md-icon></button>
+</ng-template>
+
+
+<md-card class="card-small-right">
+    <md-card-header>
+        <md-card-title>Selections <small>({{selected?.length}})</small></md-card-title>
+    </md-card-header>
+    <md-card-content>
+        <ul>
+            <li *ngFor='let sel of selected'>
+                {{sel.name}}
+            </li>
+            <li *ngIf="!selected?.length">No Selections</li>
+        </ul>
+    </md-card-content>
+</md-card>

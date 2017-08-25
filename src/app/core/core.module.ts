@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import 'hammerjs';
 
 import { MaterialModule } from './material/material.module';
@@ -20,7 +21,8 @@ import { DialogComponent } from './material/dialog.component';
     ],
     exports: [
         MaterialModule, BrowserModule,
-        CommonModule, FormsModule
+        CommonModule, FormsModule,
+        NgxDatatableModule
     ],
     declarations: [
         SnackbarComponent,

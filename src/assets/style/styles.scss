@@ -1,6 +1,9 @@
 /* Global theme */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+/* Local imports */
+@import '_table.scss';
+
 /* Global styles */
 body {
     background-color: #fafafa;
@@ -30,4 +33,9 @@ body {
 
 .clearfix:after {
     clear: both;
+}
+
+.card-stand-alone {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
