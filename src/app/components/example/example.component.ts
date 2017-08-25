@@ -15,7 +15,10 @@ export class ExampleComponent {
 
     openSnackBar() {
         this.snackBar.openFromComponent(SnackbarComponent, {
-            duration: 500,
+            duration: 2000
         });
+
+        // Simple version
+        // this.snackBar.open('Message archived');
     }
 }
