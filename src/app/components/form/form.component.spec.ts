@@ -3,7 +3,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { CoreModule } from '../../core/core.module';
 import { FormComponent } from './form.component';
 
-describe('ExampleComponent', () => {
+describe('FormComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
