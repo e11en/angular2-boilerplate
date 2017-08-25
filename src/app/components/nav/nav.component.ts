@@ -17,6 +17,7 @@ export class NavComponent implements OnInit  {
             { caption: 'Home', link: ['/'] },
             { caption: 'Example page', link: ['/example'] },
             { caption: 'Table example', link: ['/table'] },
+            { caption: 'Form example', link: ['/form'] },
         ];
     }
 }

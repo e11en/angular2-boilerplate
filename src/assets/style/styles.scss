@@ -3,6 +3,7 @@
 
 /* Local imports */
 @import '_table.scss';
+@import '_card.scss';
 
 /* Global styles */
 body {
@@ -33,15 +34,4 @@ body {
 
 .clearfix:after {
     clear: both;
-}
-
-.card-stand-alone {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.test123 {
-    position: static;
-    top: 0;
-    right: 0;
 }
