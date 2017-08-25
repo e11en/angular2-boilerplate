@@ -1,8 +1,124 @@
 <md-card class="card-stand-alone clearfix">
     <md-card-header class="card-header-full-width mat-toolbar mat-accent">
-        <md-card-title>Form example</md-card-title>
+        <md-card-title>Form examples</md-card-title>
     </md-card-header>
     <md-card-content>
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
+                <h1>Input fields</h1>
+
+                <md-input-container class="input-full-width">
+                    <input mdInput placeholder="Disabled input" disabled value="Some value">
+                </md-input-container>
+
+                <md-input-container class="input-full-width">
+                    <input mdInput placeholder="First name">
+                </md-input-container>
+
+                <md-input-container class="input-full-width">
+                    <textarea mdInput placeholder="Text area" rows="8">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat elit tellus, ut vehicula tortor accumsan non.
+                        In hac habitasse platea dictumst. Donec volutpat sollicitudin ullamcorper. Praesent enim risus, maximus et nisl molestie,
+                        gravida tempus mauris. Aliquam et pretium turpis. Proin viverra accumsan velit, a volutpat sem aliquam ac.
+                        Sed quis mattis erat, id ultricies metus. Nunc at condimentum ex. Pellentesque ultricies lacus in maximus lacinia.
+                        Morbi in pharetra justo. Praesent non nunc dictum, rhoncus dolor elementum, congue ligula. Maecenas tempus laoreet dapibus.
+                        Ut a faucibus nunc, et eleifend lacus. Sed fermentum consequat ex non vestibulum. Morbi mi metus, aliquet vel egestas ut,
+                        porttitor in nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </textarea>
+                </md-input-container>
+
+                <md-input-container class="input-full-width">
+                    <input mdInput #postalCode maxlength="5" placeholder="Input with hint" value="12345">
+                    <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+                </md-input-container>
+
+            </md-card-content>
+        </md-card>
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
+                <h1>Checkboxes</h1>
+
+                <md-checkbox [checked]="true">Checked</md-checkbox>
+                <md-checkbox [indeterminate]="true">Indeterminate</md-checkbox>
+                <md-checkbox [disabled]="true">Disabled</md-checkbox>
+
+            </md-card-content>
+        </md-card>
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
+                <h1>Radio buttons</h1>
+
+                <md-radio-group class="example-group">
+                    <md-radio-button value="option1">Option 1</md-radio-button>
+                    <md-radio-button value="option2">Option 2</md-radio-button>
+                    <md-radio-button value="option3">Option 3</md-radio-button>
+                </md-radio-group>
+
+            </md-card-content>
+        </md-card>
+
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
+
+                <h1>Date picker</h1>
+
+                <md-input-container>
+                    <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+                    <button mdSuffix [mdDatepickerToggle]="picker"></button>
+                </md-input-container>
+                <md-datepicker #picker></md-datepicker>
+
+            </md-card-content>
+        </md-card>
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
+
+                <h1>Select box</h1>
+
+                <md-select placeholder="Favorite food" name="food">
+                    <md-option value="1">Apple</md-option>
+                    <md-option value="2">Banana</md-option>
+                    <md-option value="3">Pear</md-option>
+                </md-select>
+
+            </md-card-content>
+        </md-card>
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
+
+                <h1>Slider</h1>
+
+                <md-slider [min]="0"
+                           [max]="10"
+                           [step]="1"
+                           [thumb-label]="true"
+                           [value]="5"
+                ></md-slider>
+
+            </md-card-content>
+        </md-card>
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
+
+                <h1>Toggle</h1>
+
+                <md-slide-toggle color="primary" [checked]="true">
+                    Slide me!
+                </md-slide-toggle>
+
+            </md-card-content>
+        </md-card>
+
+
+
+
 
 
     </md-card-content>
