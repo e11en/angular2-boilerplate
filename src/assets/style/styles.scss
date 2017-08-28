@@ -4,6 +4,7 @@
 /* Local imports */
 @import '_table.scss';
 @import '_card.scss';
+@import '_form.scss';
 
 /* Global styles */
 body {
@@ -34,4 +35,8 @@ body {
 
 .clearfix:after {
     clear: both;
+}
+
+.small {
+    font-size: 0.8em;
 }
