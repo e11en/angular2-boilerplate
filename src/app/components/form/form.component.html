@@ -6,6 +6,44 @@
 
         <md-card class="card-stand-alone clearfix">
             <md-card-content>
+                <h1>Example form</h1>
+
+                <form [formGroup]="form" (ngSubmit)="submitForm(form.value)">
+                    <md-input-container class="input-full-width">
+                        <input mdInput placeholder="First name" [formControl]="form.controls['firstName']">
+                    </md-input-container>
+
+                    <div class="example-input">
+                        <md-radio-group class="example-group" [formControl]="form.controls['color']">
+                            <md-radio-button value="purple">Purple</md-radio-button>
+                            <md-radio-button value="green">Green</md-radio-button>
+                        </md-radio-group>
+                    </div>
+
+                    <div class="example-input">
+                        <md-select placeholder="Favorite food" name="food" [formControl]="form.controls['food']">
+                            <md-option value="apple">Apple</md-option>
+                            <md-option value="banana">Banana</md-option>
+                            <md-option value="peach">Peach</md-option>
+                        </md-select>
+                    </div>
+
+                    <div class="example-input">
+                        <md-slide-toggle color="primary" [checked]="true" [formControl]="form.controls['slide']">
+                            Slide me!
+                        </md-slide-toggle>
+                    </div>
+
+                    <button md-raised-button type="submit" color="primary">SEND</button>
+                    <p class="small">* invalid radio button color change is done in _form.scss</p>
+
+                </form>
+
+            </md-card-content>
+        </md-card>
+
+        <md-card class="card-stand-alone clearfix">
+            <md-card-content>
                 <h1>Input fields</h1>
 
                 <md-input-container class="input-full-width">

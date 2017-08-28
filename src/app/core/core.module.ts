@@ -4,7 +4,7 @@
 
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
@@ -22,7 +22,7 @@ import { DialogComponent } from './material/dialog.component';
     exports: [
         MaterialModule, BrowserModule,
         CommonModule, FormsModule,
-        NgxDatatableModule
+        NgxDatatableModule, ReactiveFormsModule
     ],
     declarations: [
         SnackbarComponent,
